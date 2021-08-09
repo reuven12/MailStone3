@@ -33,7 +33,7 @@ app.get('/api/numbers/prime?amount=n', (req,res)=>{
 app.post('/api/numbers/prime/validate',(req,res)=>{
     res.status(200).json({
         message: req.body
-    })
+    })    
 })
 
 

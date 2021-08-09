@@ -1,0 +1,28 @@
+{
+  "name": "mailstone3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "types.js",
+  "scripts": {
+    "dev": "nodemon types",
+    "start": "node types.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reuven12/MailStone3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reuven12/MailStone3/issues"
+  },
+  "homepage": "https://github.com/reuven12/MailStone3#readme",
+  "devDependencies": {
+    "@types/node": "^16.4.13"
+  },
+  "dependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.12"
+  }
+}

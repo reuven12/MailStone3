@@ -1,5 +1,5 @@
-// var express=require('express');
-import express from 'express';
+var express=require('express');
+// import express from 'express';
 const app=express();
 var module: NodeModule;
 var morgan=require('morgan');
@@ -23,12 +23,7 @@ app.use(express.urlencoded({
     extended:true
 }))
 
-app.get('/api/numbers/prime', (req,res)=>{
-    res.status(200)
-    res.send ('HIIII')
-    
-});
-app.post('/api/numbers/prime/validate',(req,res)=>{
+app.post('/api/numbers/prime/validate',(req,res,next)=>{
    
     var numArr:any;
     numArr=(req.body);
@@ -40,7 +35,7 @@ app.post('/api/numbers/prime/validate',(req,res)=>{
     var alphas:any=[];
     alphas = numarray;
     console.log(alphas);
-    var i;
+    var i:number;
     var myArray =[];
     for (i = 0; i < alphas.length; i++) {
         if (alphas[i] % 2 === 0) {
@@ -48,7 +43,33 @@ app.post('/api/numbers/prime/validate',(req,res)=>{
         }
             myArray.push(true);
         }
-    res.send(myArray)
+        for(i=0; i<myArray.length;){
+            if(myArray[i]===true){
+               i++;
+            }
+            else{
+            res.send(false)
+            }
+        }
+        res.send(true)
+
+        next();
+});
+
+
+app.get('/api/numbers/prime', (req,res)=>{
+    var amount:any=[];
+    var n:number=Math.floor(Math.random()*32);
+    amount.push(n) ;
+    // while( i<n){
+        // amount.push(n[i])
+        console.log(amount);
+
+    // }
+    
+    
+    
+    
 });
 
 module.exports=app;

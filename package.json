@@ -1,27 +1,91 @@
 {
-  "name": "mailstone3",
-  "version": "1.0.0",
-  "description": "",
-  "main": "types.js",
-  "scripts": {
-    "dev": "nodemon types",
-    "start": "node types.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/reuven12/MailStone3.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/reuven12/MailStone3/issues"
-  },
-  "homepage": "https://github.com/reuven12/MailStone3#readme",
-  "devDependencies": {
-    "@types/express": "^4.17.13",
   
+    "name": "milestone3",
     
+    "version": "1.0.0",
+    
+    "description": "",
+    
+    "main": "app.js",
+    
+    "scripts": {
+    
+      
+    "test": "echo \"Error: no test specified\" && exit 1",
+    
+      
+    "start": "tsc && npm run serve",
+    
+      
+    "serve": "node dist/app.js",
+    
+      
+    "build-ts": "tsc",
+    
+      
+    "dev:ts": "nodemon",
+    
+      
+    "lint": "eslint . --ext .ts"
+    
+    },
+    
+    "repository": {
+    
+      
+    "type": "git",
+    
+      
+    "url": "git+https://github.com/YoniZangolsaz/Milestone3.git"
+    
+    },
+    
+    "keywords": [],
+    
+    "author": "",
+    
+    "license": "ISC",
+    
+    "bugs": {
+    
+      
+    "url": "https://github.com/YoniZangolsaz/Milestone3/issues"
+    
+    },
+    
+    "homepage": "https://github.com/YoniZangolsaz/Milestone3#readme",
+    
+    "dependencies": {
+    
+      
+    "body-parser": "^1.19.0",
+    
+      
+    "config.ts": "^1.0.0",
+    
+      
+    "dotenv": "^10.0.0",
+    
+      
+    "ejs": "^3.1.6",
+    
+      
+    "express": "^4.17.1",
+    
+      
+    "isprime": "^0.0.2",
+    
+      
+    "pug": "^3.0.2"
+    
+    },
+    
+    "devDependencies": {
+    
+      
+    "@types/express": "^4.17.13",
+    
+      
     "@types/node": "^16.4.13",
     
       
@@ -69,24 +133,5 @@
       
     "typescript": "^3.9.10"
     
-    
-  },
-
-
-
-  "dependencies": {
-    "body-parser": "^1.19.0",
-  
-    
-    "config.ts": "^1.0.0",
-    
-      
-    "dotenv": "^10.0.0",
-    
-      
-    "express": "^4.17.1",
-    
-      
-    "isprime": "^0.0.2"
+    }
   }
-}

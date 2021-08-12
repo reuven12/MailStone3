@@ -1,137 +1,137 @@
 {
   
-    "name": "milestone3",
+  "name": "milestone3",
+  
+  "version": "1.0.0",
+  
+  "description": "",
+  
+  "main": "app.js",
+  
+  "scripts": {
+  
     
-    "version": "1.0.0",
+  "test": "echo \"Error: no test specified\" && exit 1",
+  
     
-    "description": "",
+  "start": "tsc && npm run serve",
+  
     
-    "main": "app.js",
+  "serve": "node dist/app.js",
+  
     
-    "scripts": {
+  "build-ts": "tsc",
+  
     
-      
-    "test": "echo \"Error: no test specified\" && exit 1",
+  "dev:ts": "nodemon",
+  
     
-      
-    "start": "tsc && npm run serve",
+  "lint": "eslint . --ext .ts"
+  
+  },
+  
+  "repository": {
+  
     
-      
-    "serve": "node dist/app.js",
+  "type": "git",
+  
     
-      
-    "build-ts": "tsc",
+  "url": "git+https://github.com/YoniZangolsaz/Milestone3.git"
+  
+  },
+  
+  "keywords": [],
+  
+  "author": "",
+  
+  "license": "ISC",
+  
+  "bugs": {
+  
     
-      
-    "dev:ts": "nodemon",
+  "url": "https://github.com/YoniZangolsaz/Milestone3/issues"
+  
+  },
+  
+  "homepage": "https://github.com/YoniZangolsaz/Milestone3#readme",
+  
+  "dependencies": {
+  
     
-      
-    "lint": "eslint . --ext .ts"
+  "body-parser": "^1.19.0",
+  
     
-    },
+  "config.ts": "^1.0.0",
+  
     
-    "repository": {
+  "dotenv": "^10.0.0",
+  
     
-      
-    "type": "git",
+  "ejs": "^3.1.6",
+  
     
-      
-    "url": "git+https://github.com/YoniZangolsaz/Milestone3.git"
+  "express": "^4.17.1",
+  
     
-    },
+  "isprime": "^0.0.2",
+  
     
-    "keywords": [],
+  "pug": "^3.0.2"
+  
+  },
+  
+  "devDependencies": {
+  
     
-    "author": "",
+  "@types/express": "^4.17.13",
+  
     
-    "license": "ISC",
+  "@types/node": "^16.4.13",
+  
     
-    "bugs": {
+  "@typescript-eslint/eslint-plugin": "^4.29.1",
+  
     
-      
-    "url": "https://github.com/YoniZangolsaz/Milestone3/issues"
+  "@typescript-eslint/parser": "^4.29.1",
+  
     
-    },
+  "eslint": "^7.32.0",
+  
     
-    "homepage": "https://github.com/YoniZangolsaz/Milestone3#readme",
+  "eslint-config-airbnb-typescript": "^12.3.1",
+  
     
-    "dependencies": {
+  "eslint-config-prettier": "^8.3.0",
+  
     
-      
-    "body-parser": "^1.19.0",
+  "eslint-plugin-import": "^2.24.0",
+  
     
-      
-    "config.ts": "^1.0.0",
+  "eslint-plugin-jsx-a11y": "^6.4.1",
+  
     
-      
-    "dotenv": "^10.0.0",
+  "eslint-plugin-prettier": "^3.4.0",
+  
     
-      
-    "ejs": "^3.1.6",
+  "eslint-plugin-react": "^7.24.0",
+  
     
-      
-    "express": "^4.17.1",
+  "eslint-plugin-react-hooks": "^4.2.0",
+  
     
-      
-    "isprime": "^0.0.2",
+  "nodemon": "^2.0.12",
+  
     
-      
-    "pug": "^3.0.2"
+  "prettier": "^2.3.2",
+  
     
-    },
+  "ts-node": "^10.2.0",
+  
     
-    "devDependencies": {
+  "tslint-config-airbnb": "^5.11.2",
+  
     
-      
-    "@types/express": "^4.17.13",
-    
-      
-    "@types/node": "^16.4.13",
-    
-      
-    "@typescript-eslint/eslint-plugin": "^4.29.1",
-    
-      
-    "@typescript-eslint/parser": "^4.29.1",
-    
-      
-    "eslint": "^7.32.0",
-    
-      
-    "eslint-config-airbnb-typescript": "^12.3.1",
-    
-      
-    "eslint-config-prettier": "^8.3.0",
-    
-      
-    "eslint-plugin-import": "^2.24.0",
-    
-      
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    
-      
-    "eslint-plugin-prettier": "^3.4.0",
-    
-      
-    "eslint-plugin-react": "^7.24.0",
-    
-      
-    "eslint-plugin-react-hooks": "^4.2.0",
-    
-      
-    "nodemon": "^2.0.12",
-    
-      
-    "prettier": "^2.3.2",
-    
-      
-    "ts-node": "^10.2.0",
-    
-      
-    "tslint-config-airbnb": "^5.11.2",
-    
-      
-    "typescript": "^3.9.10"
-    
-    }
+  "typescript": "^3.9.10"
+  
   }
+}

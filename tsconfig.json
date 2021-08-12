@@ -11,11 +11,11 @@
         "paths": {
             "*": [
                 "node_modules/*",
-                "src/app/*"
+                "src/types/*"
             ]
         }
     },
     "include": [
-        "src/**/*"
-    ]
+        "src/**/*", "unrelevent/files.rpc.ts"
+, "src/types.ts"    ]
 }

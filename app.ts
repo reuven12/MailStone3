@@ -58,18 +58,22 @@ app.post('/api/numbers/prime/validate',(req,res,next)=>{
 
 
 app.get('/api/numbers/prime', (req,res)=>{
-    var amount:any=[];
-    var n:number=Math.floor(Math.random()*32);
-    amount.push(n) ;
-    // while( i<n){
-        // amount.push(n[i])
-        console.log(amount);
-
-    // }
+    app.get('/api/numbers/prime', (req,res)=>{
     
-    
-    
-    
+    let prime_list = [];
+    let a = req.query.amount;
+    if (a <= 32 ){  
+        for (let i:number = 0; prime_list.length < a; i++ ){
+            if (i % 2 === 0){
+            }else{
+                prime_list.push(i)
+            }
+        } 
+        console.log(prime_list);
+    }else{
+        console.log("its over 32 ");
+    }
+    res.send(prime_list)
 });
 
 module.exports=app;

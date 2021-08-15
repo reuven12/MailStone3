@@ -1,15 +1,20 @@
-var express=require('express');
 var path=require('path');
-// import express from 'express';
+import express from 'express';
 const app=express();
 var module: NodeModule;
-var morgan=require('morgan');
+// var morgan=require('morgan');
+var http=require('http');
+var SERVER_PORT:number;
+SERVER_PORT=3000;
 
-app.set('views',path.join(__dirname,'views'));
+app.listen(SERVER_PORT, () => {
+    console.log("running");
+    
+});
+
 app.set('view engine','pug');
 
 
-app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.text());
 app.use(express.static(path.join(__dirname,"public")));
@@ -20,10 +25,10 @@ app.use(express.urlencoded({
 
 app.post('/api/numbers/prime/validate',(req,res,next)=>{
    
-    var numArr:number|string;
+    var numArr:string;
     numArr=(req.body);
 
-    var numarray = numArr.split(',').map(function(item) {
+    var numarray = numArr.split(',').map(function(item:string) {
         return parseInt(item);
     });
 
@@ -53,15 +58,20 @@ app.post('/api/numbers/prime/validate',(req,res,next)=>{
         next();
 });
 
+app.listen(3000,() => {
+    console.log("runninhd ");
+    
+})
 
-app.get('/api/numbers/prime', (req,res)=>{
+
+    app.get('/api/numbers/prime', (req,res)=>{
     
-    let prime_list = []
+    let prime_list : number[];
+    let inputs : number| string = req.query.amount;
+    // console.log(inputs);
     
-    let a = req.query.amount
-    
-    if (a <= 32 ){  
-        for (let i:number = 0; prime_list.length < a; i++ ){
+    if (inputs <= 32 ){  
+        for (let i:number = 0; prime_list.length < inputs; i++ ){
             if (i % 2 === 0){
             }else{
                 prime_list.push(i)
@@ -75,18 +85,30 @@ app.get('/api/numbers/prime', (req,res)=>{
 });
 
 app.get('/api/numbers/prime/display',function(req,res){
-    let prime_list:object = [1,2,3,5,7,9,11,13,15,17]
+    let prime_list : number[]= [1,2,3,5,7,9,11,13,17,19];
+    const num1 : number =  prime_list[0];
+    const num2 : number =  prime_list[1];
+    const num3 : number =  prime_list[2];
+    const num4 : number =  prime_list[3];
+    const num5 : number =  prime_list[4];
+    const num6 : number =  prime_list[5];
+    const num7 : number =  prime_list[6];
+    const num8 : number =  prime_list[7];
+    const num9 : number =  prime_list[8];
+    const num10 : number =  prime_list[9];
+
+
     res.render('index',{
-        num1:prime_list[0],
-        num2:prime_list[1],
-        num3:prime_list[2],
-        num4:prime_list[3],
-        num5:prime_list[4],
-        num6:prime_list[5],
-        num7:prime_list[6],
-        num8:prime_list[7],
-        num9:prime_list[8],
-        num10:prime_list[9]
+        num1,
+        num2,
+        num3,
+        num4,
+        num5,
+        num6,
+        num7,
+        num8,
+        num9,
+        num10
     });
 })
 

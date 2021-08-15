@@ -6,7 +6,7 @@
   
   "description": "",
   
-  "main": "app.js",
+  "main": "dist/app",
   
   "scripts": {
   
@@ -14,16 +14,16 @@
   "test": "echo \"Error: no test specified\" && exit 1",
   
     
-  "start": "tsc && npm run serve",
+  "start": "tsc -w && npm run serve",
   
     
-  "serve": "node dist/app.js",
+  "serve": "node dist/app",
   
     
-  "build-ts": "tsc",
+  "build-ts": "tsc -w",
   
     
-  "dev:ts": "nodemon",
+  "dev:ts": "nodemon dist/app",
   
     
   "lint": "eslint . --ext .ts"
